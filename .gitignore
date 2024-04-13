@@ -7,8 +7,10 @@ __pycache__/
 *.so
 
 # Virtual environment
-.venv/
-
+.venv
+.condaVenv
+venv/
+condaVenv/
 # Distribution / packaging
 .Python
 build/
