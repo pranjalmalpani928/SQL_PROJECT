@@ -19,7 +19,11 @@ class CustomException(Exception):
         return error_message
     
     def __str__(self):
+        # output of the print statement
         return self.error_message
     
     def __repr__(self)->str:
+        # object representation 
         return CustomException.__name__.str()
+    
+
