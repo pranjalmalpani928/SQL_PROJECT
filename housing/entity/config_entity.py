@@ -1,5 +1,7 @@
 from collections import namedtuple
 
+
+# custom datatypes 
 DataIngetionConfig=namedtuple('DataIngetionConfig',['dataset_url','tgz_download_url',
                                                     'ingested_train_dir','ingested_test_dir'])
 
@@ -14,3 +16,4 @@ ModelEvaluationConfig=namedtuple('ModelEvaluationConfig',['model_evaluation_file
 
 ModelPusherConfig=namedtuple('ModelPusherConfig',['export_dir_path'])
 
+TrainingPipelineConfig=namedtuple('TrainingPipelineConfig',['artifacts_dir'])
