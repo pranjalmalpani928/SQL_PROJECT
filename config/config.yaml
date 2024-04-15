@@ -1,0 +1,36 @@
+training_pipeline_config:
+  pipeline_name: housing
+  artifact_dir: artifacts
+
+data_ingetion_config:
+  dataset_download_url: 
+  raw_data_dir: raw_data
+  tgz_download_url: tgz_data
+  ingested_data_dir: ingested_data
+  ingetsted_train_dir: train
+  ingested_test_dir: test
+
+
+data_validation_config:
+  schema_file_name: schema_file
+
+data_transformation_config:
+  add_bedroom_per_room_var: true
+  transformed_data: transformed_data
+  transformed_train_data: train
+  transformed_test_data: test
+  preprocessing_dir: preprocessed
+  preprocessed_object_file_name: preprocessed.pkl
+
+model_trainer_config:
+  trained_model_dir: trained_model
+  model_file_name: model.pkl
+  base_accuracy: 0.6
+
+model_evaluation_config:
+  model_evaluation_file_name: model_evaluation.yaml
+
+model_pusher_config:
+  model_export_dir: saved_model
+
+  
