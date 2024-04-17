@@ -3,11 +3,11 @@ training_pipeline_config:
   artifact_dir: artifacts
 
 data_ingetion_config:
-  dataset_download_url: 
+  dataset_download_url: None 
   raw_data_dir: raw_data
   tgz_download_url: tgz_data
   ingested_data_dir: ingested_data
-  ingetsted_train_dir: train
+  ingested_train_dir: train
   ingested_test_dir: test
 
 
