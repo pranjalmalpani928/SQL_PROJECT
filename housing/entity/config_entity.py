@@ -2,7 +2,7 @@ from collections import namedtuple
 
 
 # custom datatypes 
-DataIngetionConfig=namedtuple('DataIngetionConfig',['dataset_url','tgz_download_url',
+DataIngetionConfig=namedtuple('DataIngetionConfig',['dataset_url','tgz_download_url','raw_data_dir',
                                                     'ingested_train_dir','ingested_test_dir'])
 
 DataValidationConfig=namedtuple('DataValidationConfig',['schema_file_path'])

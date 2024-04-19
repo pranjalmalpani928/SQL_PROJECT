@@ -19,26 +19,25 @@ class Configuration():
             raise CustomException(e,sys) from e
 
     def get_data_ingetion_config(self)->DataIngetionConfig:
-        print(self.config_info['data_ingetion_config'])
         
         try:
             data_ingetion_config_dict=self.config_info['data_ingetion_config']
-            data_ingetion_dir=os.path.join(self.get_training_pipeline_config().artifacts_dir,'data_ingetion')
+            data_ingetion_dir=os.path.join(self.get_training_pipeline_config().artifacts_dir,'data_ingetion',self.time_stamp)
             raw_data_dir=os.path.join(data_ingetion_dir,data_ingetion_config_dict['raw_data_dir'])
             tgz_data_dir=os.path.join(data_ingetion_dir,data_ingetion_config_dict['tgz_download_url'])
             ingested_data_dir=os.path.join(data_ingetion_dir,data_ingetion_config_dict['ingested_data_dir'])
             ingested_train_dir=os.path.join(ingested_data_dir,data_ingetion_config_dict['ingested_train_dir'])
             ingested_test_dir=os.path.join(ingested_data_dir,data_ingetion_config_dict['ingested_test_dir'])
             
-            print(data_ingetion_config_dict)
-            print(data_ingetion_dir)
-            print(raw_data_dir)
-            print(tgz_data_dir)
-            print(ingested_data_dir)
-            print(ingested_train_dir)
-            print(ingested_test_dir)
+            # print(data_ingetion_config_dict)
+            # print(data_ingetion_dir)
+            # print(raw_data_dir)
+            # print(tgz_data_dir)
+            # print(ingested_data_dir)
+            # print(ingested_train_dir)
+            # print(ingested_test_dir)
             return DataIngetionConfig(dataset_url=data_ingetion_config_dict['dataset_download_url'],
-                                    tgz_download_url=tgz_data_dir,
+                                    tgz_download_url=tgz_data_dir, raw_data_dir=raw_data_dir,
                                     ingested_train_dir=ingested_train_dir,
                                     ingested_test_dir=ingested_test_dir)
         except Exception as e:
