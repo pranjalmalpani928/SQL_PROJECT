@@ -7,6 +7,10 @@ __pycache__/
 *.so
 
 housing/artifact
+
+.housing/artifact
+
+.artifact
 # Virtual environment
 .venv
 .condaVenv
