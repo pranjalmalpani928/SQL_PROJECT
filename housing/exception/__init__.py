@@ -12,7 +12,7 @@ class CustomException(Exception):
 
         # exception file path, line number
         exc_type, exc_obj, exc_tb=error_details.exc_info()
-        line_number=exc_tb.tb_frame.f_lineno
+        line_number=exc_tb.tb_lineno
         file_name=exc_tb.tb_frame.f_code.co_filename
         error_message= f'Error occured in script [{file_name}], in the line number [{line_number}] with\
               the error message [{error_message}]'
